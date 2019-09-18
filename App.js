@@ -6,68 +6,41 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
-  Text,
-  StatusBar,
+  TextInput,
+  TouchableOpacity,
+  Text
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
   return (
-          <View style={styles.body}>
-          </View>
+    <View style={styles.container}>
+      <TextInput placeholder="Massa" keyboardType="numeric" style={styles.input} />
+      <TextInput placeholder="Altura" keyboardType="numeric" style={styles.input} />
+      {/* <TouchableOpacity onPress={() => { }} > <Text> Calcular </Text></TouchableOpacity> */}
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: '#F5FCFF'
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  input: {
+    height: 80,
+    textAlign: 'center',
+    width: '50%',
+    fontSize: 50,
+    marginTop: 24
+  }
 });
 
 export default App;
+
+// https://www.youtube.com/watch?v=RdcguVta_bs
